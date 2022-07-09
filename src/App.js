@@ -8,9 +8,15 @@ function App() {
     { id: "e3", title: 'Car Insurance 3', amount: 494.67, date: new Date(2021, 4, 28) },
     { id: "e4", title: 'Car Insurance 4', amount: 594.67, date: new Date(2021, 5, 28) },
   ]
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses item={expenses} />
     </div>
   );
